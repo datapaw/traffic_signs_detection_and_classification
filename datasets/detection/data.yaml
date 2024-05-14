@@ -1,6 +1,0 @@
-path: detection
-train: train
-val: val
-test: test
-names: 
-  0: sign
