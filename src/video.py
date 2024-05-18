@@ -5,12 +5,12 @@ import ultralytics
 model = ultralytics.YOLO("./signs_det_clas_results\weights\last.pt")  # Specify the path to your YOLOv8 weights
 
 # Open the video file
-video_path = "./video/wawa_HD.mp4"
+video_path = "./video/warszawka.mp4"
 cap = cv2.VideoCapture(video_path)
 
 # Get the video writer initialized to save the output video
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-out = cv2.VideoWriter('./video/output_video_HD.mp4', fourcc, cap.get(cv2.CAP_PROP_FPS), 
+out = cv2.VideoWriter('./video/output_video.mp4', fourcc, cap.get(cv2.CAP_PROP_FPS), 
                       (int(cap.get(cv2.CAP_PROP_FRAME_WIDTH)), int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))))
 
 while cap.isOpened():
